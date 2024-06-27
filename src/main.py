@@ -93,7 +93,7 @@ def checkUpdates():
     global latest_version
     print("Checking for Updates...")
     try:
-        latest_version = requests.get(rf"https://github.com/deR0R0/TikTok-TTS-Generator/releases/latest")
+        latest_version = requests.get(rf"https://api.github.com/repos/der0r0/TikTok-TTS-Generator/releases/latest")
         latest_version = latest_version.json()
         latest_version = latest_version["tag_name"]
     except Exception as err:
